@@ -203,8 +203,52 @@ public class Main {
         double solution = ((35.74 + (0.625 * temperature)) - (35.75 * (Math.pow(speed, 0.16))) + (0.4275 * temperature * (Math.pow(speed, 0.16))));
         System.out.println("The wind chill index is " + solution);
     }
+    public void Task18(){
+        System.out.println("a   b   pow(a, b");
+        System.out.println("1   " + "2  " + (int)(Math.pow(2,1)));
+        System.out.println("2   " + "3  " + (int)(Math.pow(2,3)));
+        System.out.println("3   " + "4  " + (int)(Math.pow(3,4)));
+        System.out.println("4   " + "5  " + (int)(Math.pow(4,5)));
+        System.out.println("5   " + "6  " + (int)(Math.pow(5,6)));
+    }
+    public void Task20(){
+        Scanner input = new Scanner(System.in);
+        System.out.println("Enter balance: ");
+        double balance = input.nextDouble();
+        System.out.println("Enter interest rate: ");
+        double interestRate = input.nextDouble();
+        double interest = (balance * (interestRate/1200)) * 10;
+        System.out.println("The interest is " + interest);
+    }
+    public void Task21(){
+        Scanner input = new Scanner(System.in);
+        System.out.println("Enter investment amount: ");
+        double amount = input.nextDouble();
+        System.out.println("Enter annual interest rate in percentage: ");
+        double annualRate = input.nextDouble();
+        System.out.println("Enter number of years: ");
+        double year = input.nextDouble();
+        double monthlyInterestRate = (annualRate/100) / 12;
+        double rate = 1 + monthlyInterestRate;
+        double yearPow = year * 12;
+        double futureInvestmentValue = amount * (Math.pow(rate, yearPow));
+        System.out.println("Accumulated value is $" + futureInvestmentValue);
+    }
+    public void Task23(){
+        Scanner input = new Scanner(System.in);
+        System.out.println("Enter the driving distance: ");
+        double distance = input.nextDouble();
+        System.out.println("Enter miles per gallon: ");
+        double milesPerGallon = input.nextDouble();
+        System.out.println("Enter price per gallon: ");
+        double pricePerGallon = input.nextDouble();
+        double cost = (distance / milesPerGallon)*pricePerGallon;
+        System.out.println("The cost of driving is $" + cost);
+
+    }
     public static void main(String[] args) {
         Main object = new Main();
-        object.Task17();
+        object.Task23();
     }
+
 }
