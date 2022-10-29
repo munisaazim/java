@@ -25,8 +25,30 @@ public class Main {
         }
         System.out.println("The year(s) need(s): " + year);
     }
+    public void CaseStudy3(){
+        Scanner input = new Scanner(System.in);
+        System.out.println("Enter word to check palindrome or no");
+        String word= input.nextLine();
+        int length = word.length() -1;
+        int low = 0;
+        boolean check = true;
+        while(low<length){
+            if(word.charAt(low)!=word.charAt(length)){
+                check = false;
+                break;
+            }
+            low++;
+            length--;
+        }
+        if(check){
+            System.out.println("The word is Palindrome");
+        }
+        else{
+            System.out.println("The word is not Palindrome");
+        }
+    }
     public static void main(String[] args) {
         Main object = new Main();
-        object.CaseStudy2();
+        object.CaseStudy3();
     }
 }
