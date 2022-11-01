@@ -603,6 +603,157 @@ public class Main {
             System.out.println("Perimeter: " +(edgeOne + edgeTwo+edgeThree));
         }
     }
+    public void Task20(){
+        Scanner input = new Scanner(System.in);
+        System.out.println("Enter the temperature in Fahrenheit between -58°F and 41°F:");
+        double temperature = input.nextDouble();
+        System.out.println("Enter the wind speed (>=2) in miles per hour");
+        double speed = input.nextDouble();
+        if(temperature>-58.0 && temperature<41.0 && speed>=2.0) {
+            double solution = ((35.74 + (0.625 * temperature)) - (35.75 * (Math.pow(speed, 0.16))) + (0.4275 * temperature * (Math.pow(speed, 0.16))));
+            System.out.println("The wind chill index is " + solution);
+        }
+        else {
+            System.out.println("Incorrect input");
+        }
+    }
+    public void Task21(){
+        Scanner input = new Scanner(System.in);
+        System.out.println("Enter year: (e.g., 2012):");
+        int year = input.nextInt();
+        System.out.println("Enter month: 1-12: ");
+        int month = input.nextInt();
+        System.out.println("Enter the day of the month: 1-31:");
+        int day = input.nextInt();
+        double century = year/100;
+        double centuryYear = year % 100;
+        int dayCalculate = (int)((((day + (26*(month + 1)/10)) + centuryYear + (centuryYear/4) + (century/4) + 5*century))%7);
+        switch(dayCalculate){
+            case 0:
+                System.out.print("Day of the week is Saturday");
+                break;
+            case 1:
+                System.out.print("Day of the week is Monday");
+                break;
+            case 2:
+                System.out.print("Day of the week is Tuesday");
+                break;
+            case 3:
+                System.out.print("Day of the week is Wednesday");
+                break;
+            case 4:
+                System.out.print("Day of the week is Thursday");
+                break;
+            case 5:
+                System.out.print("Day of the week is Friday");
+                break;
+            case 6:
+                System.out.print("Day of the week is Sunday");
+                break;
+        }
+
+    }
+    public void Task22(){
+        int x1 = 0;
+        int y1 = 0;
+        Scanner input = new Scanner(System.in);
+        System.out.println("Enter x value");
+        int x2 = input.nextInt();
+        System.out.println("Enter y value");
+        int y2 = input.nextInt();
+        double calculateX = (Math.pow((x2-x1),2));
+        double calculateY = (Math.pow((y2-y1),2));
+        double distance = (Math.pow((calculateX + calculateY), 0.5));
+        if(distance<10){
+            System.out.println("Point (" + x2 +", " + y2 + ")" + " is in the circle");
+        }
+        else {
+            System.out.println("Point (" + x2 +", " + y2 + ")" + " is not in the circle");
+        }
+    }
+    public void Task23(){
+        int width = 10;
+        int height = 5;
+        Scanner input = new Scanner(System.in);
+        System.out.println("Enter x value");
+        int x2 = input.nextInt();
+        System.out.println("Enter y value");
+        int y2 = input.nextInt();
+        if(10/x2>=x2 && 5/y2<=y2){
+           System.out.println("Point (" + x2 + ", " + y2 + ") is in the rectangle");
+        }
+        else{
+            System.out.println("Point (" + x2 + ", " + y2 + ") is not in the rectangle");
+        }
+    }
+    public void Task27(){
+// Prompt the user to enter the center x, y coorginates,
+        Scanner input = new Scanner(System.in);
+        System.out.print("Enter r1's center x-, y-coordinates, width and height: ");
+        double r1x = input.nextDouble();
+        double r1y = input.nextDouble();
+        double r1Width = input.nextDouble();
+        double r1Height = input.nextDouble();
+        System.out.print("Enter r2's center x-, y-coordinates, width and height: ");
+        double r2x = input.nextDouble();
+        double r2y = input.nextDouble();
+        double r2Width = input.nextDouble();
+        double r2Height = input.nextDouble();
+
+        // Determine whether the second rectangle is inside the first
+        if	((Math.pow(Math.pow(r2y - r1y, 2), .05) + r2Height / 2 <= r1Height / 2) &&
+                (Math.pow(Math.pow(r2x - r1x, 2), .05) + r2Width / 2 <= r1Width / 2) &&
+                (r1Height / 2 + r2Height / 2 <= r1Height) &&
+                (r1Width / 2 + r2Width / 2 <= r1Width))
+            System.out.println("r2 is inside r1");
+        else if ((r1x + r1Width / 2 > r2x - r2Width) ||
+                (r1y + r1Height / 2 > r2y - r2Height))
+            System.out.println("r2 overlaps r1");
+        else
+            System.out.println("r2 does not overlap r1");
+    }
+    public void Task31(){
+        Scanner input = new Scanner(System.in);
+        System.out.println("Enter the exchange rate from dollars to RMB: ");
+        double rate = input.nextDouble();
+        System.out.println("Enter 0 to convert dollars to RMB and 1 vice versa: ");
+        int userInput = input.nextInt();
+        switch (userInput){
+            case 0:
+                System.out.println("Enter the dollar amount:");
+                double exchange = input.nextDouble();
+                double yuan = exchange * rate;
+                System.out.println("$" + exchange + " is " + yuan + " yuan");
+            case 1:
+                System.out.println("Enter the yuan amount:");
+                double exchangeYuan = input.nextDouble();
+                double dollar = ((int)((exchangeYuan * 100) / rate) / 100.0);
+                System.out.println(exchangeYuan + " yuan is $" + dollar);
+            default:
+                System.out.println("Incorrect input");
+        }
+    }
+    public void Task33(){
+        Scanner input = new Scanner(System.in);
+        System.out.print("Enter weight and price for package 1: ");
+        double weightOne = input.nextDouble();
+        double priceOne = input.nextDouble();
+        System.out.print("Enter weight and price for package 2: ");
+        double weightTwo = input.nextDouble();
+        double priceTwo = input.nextDouble();
+        if(priceTwo/weightTwo<priceOne/weightOne){
+            System.out.println("Package 2 has a better price.");
+        }
+        else if(priceOne/weightOne<priceTwo/weightTwo){
+            System.out.println("Package 2 has a better price.");
+        }
+        else if(priceOne/weightOne == priceTwo/weightTwo){
+            System.out.println("Package 2 has a better price.");
+        }
+        else {
+            System.out.println("Incorrect input");
+        }
+    }
     public static void main(String[] args) {
         //Cannot convert boolean to int and int to boolean
         /*boolean b = true;
@@ -611,7 +762,7 @@ public class Main {
         int j = 1;
         boolean a = (boolean)j;*/
         Main object = new Main();
-        object.Task19();
+        object.Task33();
     }
 
 }
