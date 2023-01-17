@@ -11,9 +11,14 @@ public class Main extends DriverCheck {
         Login object = new Login();
         EnteredPage objectMain = new EnteredPage();
         ForgotPassword objectForgotPassword = new ForgotPassword();
+        CheckSuccessLogin success = new CheckSuccessLogin();
         objectMain.enteredPage();
         objectForgotPassword.forgotPassword();
         object.loginWithoutOnBoardingWithButton();
+        success.checkSuccessLogin();
+        success.goToDashboard();
+        success.profileLogout();
+        driver.quit();
     }
 
 }
