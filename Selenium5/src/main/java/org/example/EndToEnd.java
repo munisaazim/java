@@ -34,6 +34,7 @@ public class EndToEnd extends DriverGet{
         }
     }
 
+    //Selecting Destinations (From/To)
     public void selectDestination() throws InterruptedException {
         driver.findElement(By.xpath("(//input)[1]")).click();
         driver.findElement(By.xpath("//*[text() = \"Agra\"]")).click();
@@ -43,6 +44,7 @@ public class EndToEnd extends DriverGet{
 
     }
 
+    //Selecting Number of Passengers
     public void selectPassengers() throws InterruptedException {
         driver.findElement(By.xpath("(//*[@tabindex])[26]")).click();
         Thread.sleep(5000);
@@ -53,6 +55,7 @@ public class EndToEnd extends DriverGet{
         System.out.println("Passengers number is selected");
     }
 
+    //Selecting Currency Type
     public void selectCurrency(){
         WebElement staticDropdown = driver.findElement(By.xpath("(//*[@data-testid=\"svg-img\"])[17]"));
         Actions act = new Actions(driver);
@@ -67,17 +70,20 @@ public class EndToEnd extends DriverGet{
          */
     }
 
+    //Choosing FLight Date(Start Date)
     public void checkCalendarDate(){
         getPage2();
         driver.findElement(By.xpath("//*[@data-testid = 'departure-date-dropdown-label-test-id']")).click();
         driver.findElement(By.xpath("(//*[contains(@class , 'r-y47klf')])[1]")).click();
     }
 
+    //Select Who Gonna Fly
     public void selectWhoFly(){
         driver.findElement(By.xpath("//*[text() = \"Family & Friends\"]")).click();
         System.out.println("Passengers who fly is selected");
     }
 
+    //Search Particular Flight
     public void selectSearch(){
         driver.findElement(By.xpath("//*[text() = \"Search Flight\"]/..")).click();
         //new WebDriverWait(getWebDriver(), duration).until(ExpectedConditions.elementToBeClickable(By.xpath("//*[text() = \"Search Flight\"]"))).click();
@@ -85,6 +91,7 @@ public class EndToEnd extends DriverGet{
         System.out.println("Search is clicked");
     }
 
+    //TestNG Checkinh new page is opened
     public void checkNoFlight(){
         Assert.assertEquals(driver.findElement(By.xpath("((//*[@data-testid='svg-img'])[5]/..//div)[1]")).getAttribute("innerHTML"), "Unfortunately, there are no flights available.");
     }

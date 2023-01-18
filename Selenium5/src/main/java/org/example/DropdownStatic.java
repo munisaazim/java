@@ -8,6 +8,12 @@ import org.testng.Assert;
 import java.util.List;
 
 public class DropdownStatic extends DriverGet{
+    public void acceptAlert(){
+
+        driver.switchTo().alert().accept();
+        System.out.println("Alert is accepted");
+    }
+
     public void dropDownStatic(){
       getPage();
 
@@ -19,6 +25,7 @@ public class DropdownStatic extends DriverGet{
         dropdown.selectByValue("USD");
         System.out.println(dropdown.getFirstSelectedOption().getText());
     }
+
     public void updatedDropdownStaic(){
         getPage2();
         driver.findElement(By.xpath("(//*[@tabindex])[26]")).click();

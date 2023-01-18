@@ -21,6 +21,7 @@ public class Main {
         object.selectCurrency();
         object.selectPassengers();
         object.selectSearch();
-        //object.exit();
+        object.checkNoFlight();
+        object.exit();
     }
 }
