@@ -93,7 +93,7 @@ public class EndToEnd extends DriverGet{
 
     //TestNG Checkinh new page is opened
     public void checkNoFlight(){
-        Assert.assertEquals(driver.findElement(By.xpath("((//*[@data-testid='svg-img'])[5]/..//div)[1]")).getAttribute("innerHTML"), "Unfortunately, there are no flights available.");
+        Assert.assertEquals(driver.findElement(By.xpath("(//*[contains(@class, 'r-homxoj')])[16]")).getAttribute("innerHTML"), "Unfortunately, there are no flights available.");
     }
 
     public void exit(){

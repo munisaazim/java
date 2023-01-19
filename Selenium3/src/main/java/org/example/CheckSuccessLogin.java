@@ -3,9 +3,15 @@ package org.example;
 import org.openqa.selenium.By;
 import org.testng.Assert;
 
+import java.time.Duration;
+import java.util.concurrent.TimeUnit;
+
+import static java.util.concurrent.TimeUnit.SECONDS;
+
 public class CheckSuccessLogin extends DriverCheck{
 
     public void checkSuccessLogin(){
+        driver.manage().timeouts().implicitlyWait(10, SECONDS);
         driver.findElement(By.xpath("//*[@class = 'userPanel']")).click();
         Assert.assertEquals(driver.findElement(By.xpath("//*[@class = 'mydashBoard']/span")).getAttribute("innerHTML"), "Dashboard");
     }
