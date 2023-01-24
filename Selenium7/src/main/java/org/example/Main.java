@@ -12,15 +12,17 @@ public class Main extends GetDriver{
         CountLinks countLinks = new CountLinks();
         CookieAndScrollAndBrokenLink cookieAndScrollAndBrokenLink = new CookieAndScrollAndBrokenLink();
         GetDriver getDriver = new GetDriver();
-        getDriver.enterPage();
-        cookieAndScrollAndBrokenLink.maximizeWindow();
-        cookieAndScrollAndBrokenLink.cookieAndScrollAndBrokenLink();
+        LocatorsTabsScreenshot locatorsTabsScreenshot = new LocatorsTabsScreenshot();
+        //enterPage();
+        //cookieAndScrollAndBrokenLink.maximizeWindow();
+        //cookieAndScrollAndBrokenLink.cookieAndScrollAndBrokenLink();
         /*
         mouse.mouseLoginMove();
         childAndParent.childAndParent();
         countLinks.countLinks();
         countLinks.clickInnerFootElement()
          */
+        locatorsTabsScreenshot.multipleTabsAndRelativeLocators();
         quit();
 
     }
