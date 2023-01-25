@@ -1,9 +1,16 @@
 package org.example;
 
+import org.testng.annotations.AfterTest;
+import org.testng.annotations.BeforeClass;
+import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
 public class ExampleTestNG3 {
 
+    @AfterTest
+    public void afterTest(){
+        System.out.println("Class ExampleTestNG3- ---->afterTest");
+    }
     @Test
     public void Mobile1(){
         System.out.println("Mobile1");
@@ -26,6 +33,10 @@ public class ExampleTestNG3 {
     }
     @Test
     public void Show(){
-        System.out.println("SHow answer");
+        System.out.println("Show answer");
+    }
+    @BeforeTest
+    public void beforeTest(){
+        System.out.println("Class ExampleTestNG3--->beforeTest");
     }
 }

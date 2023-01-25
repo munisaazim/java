@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite">
+    <test verbose="2" preserve-order="true" name="/Users/munisaazimkhodjaeva/IntelliJ IDEA/Java_Programming/Selenium10/src/main/java/org/annotations">
+        <groups>
+            <run>
+                <include name="Smoke"/>
+            </run>
+        </groups>
+        <classes><class name="groups.ClassA">
+        </class>
+            <class name="groups.ClassB">
+            </class>
+            <class name="groups.ClassC"></class>
+        </classes>
+    </test>
+</suite>
+

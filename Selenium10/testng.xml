@@ -21,6 +21,21 @@
                     <exclude name="Mobile.*"/>
                 </methods>
             </class>
+            <class name="newPackage.ExampleTestNG4">
+                <methods>
+                    <exclude name="testNG"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test verbose="2" preserve-order="true" name="/Users/munisaazimkhodjaeva/IntelliJ IDEA/Java_Programming/Selenium10/src/main/java/newPackage">
+        <classes>
+            <class name="newPackage.ExampleTestNG4">
+                <methods>
+                    <include name="testNG"/>
+                </methods>
+            </class>
         </classes>
     </test>
 </suite>
+
