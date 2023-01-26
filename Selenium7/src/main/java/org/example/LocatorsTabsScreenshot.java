@@ -6,6 +6,7 @@ import org.openqa.selenium.OutputType;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.WindowType;
 import org.testng.Assert;
+import org.testng.annotations.Test;
 
 import java.io.File;
 import java.io.IOException;
@@ -14,6 +15,8 @@ import java.util.List;
 import java.util.Set;
 
 public class LocatorsTabsScreenshot extends GetDriver{
+
+    @Test
     public void multipleTabsAndRelativeLocators() throws IOException {
         driver.manage().window().maximize();
 

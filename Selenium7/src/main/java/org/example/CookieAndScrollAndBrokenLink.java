@@ -4,6 +4,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeOptions;
+import org.testng.annotations.Test;
 
 import java.io.IOException;
 import java.net.HttpURLConnection;
@@ -12,9 +13,12 @@ import java.net.URL;
 import java.util.List;
 
 public class CookieAndScrollAndBrokenLink extends GetDriver {
+    @Test
     public void maximizeWindow(){
         driver.manage().window().maximize();
     }
+
+    @Test
     public void cookieAndScrollAndBrokenLink() throws IOException {
         JavascriptExecutor js = (JavascriptExecutor)driver;
         js.executeScript("window.scrollBy(0, 700)");

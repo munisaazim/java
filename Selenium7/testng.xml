@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite"><test verbose="2" preserve-order="true" name="/Users/munisaazimkhodjaeva/IntelliJ IDEA/Java_Programming/Selenium7">
+    <classes>
+        <class name="org.example.GetDriver">
+            <methods>
+                <include name="enterPage"/>
+                <include name="quit"/>
+            </methods>
+        </class>
+        <class name="org.example.CookieAndScrollAndBrokenLink">
+            <methods>
+                <include name="maximizeWindow"/>
+                <include name="cookieAndScrollAndBrokenLink"/>
+            </methods>
+        </class>
+        <class name="org.example.CountLinks">
+            <methods>
+                <exclude name="countLinks"/>
+                <exclude name="clickInnerFootElement"/>
+            </methods>
+        </class>
+        <class name="org.example.ExartractChildAndParent">
+            <methods>
+                <exclude name="childAndParent"/>
+            </methods>
+        </class>
+        <class name="org.example.LocatorsTabsScreenshot">
+            <methods>
+                <exclude name="multipleTabsAndRelativeLocators"/>
+            </methods>
+        </class>
+        <class name="org.example.Mouse">
+            <methods>
+                <exclude name="mouseLoginMove"/>
+            </methods>
+        </class>
+    </classes>
+</test>
+</suite>

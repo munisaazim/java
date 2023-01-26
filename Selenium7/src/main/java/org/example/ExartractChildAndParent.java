@@ -4,6 +4,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
+import org.testng.annotations.Test;
 
 import java.util.Iterator;
 import java.util.Set;
@@ -14,6 +15,7 @@ import java.util.*;
 public class ExartractChildAndParent extends GetDriver{
 
     Actions action = new Actions(driver);
+    @Test
     public void childAndParent(){
         String parentWindowHandler = driver.getWindowHandle();
         System.out.println(driver.switchTo().window(parentWindowHandler).getTitle());

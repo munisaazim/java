@@ -3,6 +3,7 @@ package org.example;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
+import org.testng.annotations.Test;
 
 import java.util.Iterator;
 import java.util.List;
@@ -10,6 +11,7 @@ import java.util.Set;
 import java.util.concurrent.TimeUnit;
 
 public class CountLinks extends GetDriver{
+    @Test
     public void countLinks(){
 
         WebElement footer = driver.findElement(By.id("navFooter"));
@@ -31,6 +33,7 @@ public class CountLinks extends GetDriver{
 
         System.out.println("Footer all links: " + number);
     }
+    @Test
     public void clickInnerFootElement(){
 
         WebElement footer = driver.findElement(By.id("navFooter"));
