@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite">
+    <test verbose="2" preserve-order="true" name="/Users/munisaazimkhodjaeva/IntelliJ IDEA/Java_Programming/Selenium10/src/main/java/org/parametrization">
+        <parameter name="URL" value="amazon.com"/>
+        <classes><class name="parallelRunning.ClassA">
+            <parameter name="Site" value="google.com"/>
+            <methods>
+                <include name="TestOne"/>
+                <include name="TestTwo"/>
+            </methods>
+        </class>
+            <class name="parallelRunning.ClassB">
+                <parameter name="Site" value="facebook.com"/>
+                <methods>
+                    <include name="TestThree"/>
+                    <include name="TestFour"/>
+                </methods>
+            </class>
+            <class name="parallelRunning.ClassC">
+                <methods>
+                    <include name="TestFive"/>
+                    <exclude name="TestSix"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>
+

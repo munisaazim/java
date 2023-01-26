@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite">
+    <test verbose="2" preserve-order="true" name="/Users/munisaazimkhodjaeva/IntelliJ IDEA/Java_Programming/Selenium10/src/main/java/org/annotations">
+        <classes><class name="helperFunctions.ClassA">
+            <methods>
+                <include name="TestOne"/>
+                <include name="TestTwo"/>
+            </methods>
+        </class>
+            <class name="helperFunctions.ClassB">
+                <methods>
+                    <include name="TestThree"/>
+                    <include name="TestFour"/>
+                </methods>
+            </class>
+            <class name="helperFunctions.ClassC">
+                <methods>
+                    <include name="TestFive"/>
+                    <include name="TestSix"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>
+
